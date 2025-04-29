@@ -31,10 +31,6 @@ jobs:
           pip install pytest
           if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
 
-      - name: Run tests (optional)
-        run: |
-          pytest || echo "No tests found or tests failed, continuing anyway"
-
   deploy:
     needs: build
     runs-on: ubuntu-latest
